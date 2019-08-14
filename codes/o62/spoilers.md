@@ -62,7 +62,7 @@ Geometry ที่ solution สวยมาก เป็นการพิจา
 
 **Insert**
 
-Greedy. ลองหา configuration ทั้งหมดที่ดีที่สุดของคำตอบก่อน 
+Greedy. ลองหา configuratfion ทั้งหมดที่ดีที่สุดของคำตอบก่อน 
 
 **Twomachinejobs**
 
@@ -80,4 +80,40 @@ Greedy. ลองหา configuration ทั้งหมดที่ดีที
 
 ดังนั้นเวลาหา $P$ เราควรจะเริ่มจาก scenario ที่การสับเปลี่ยนคำตอบมันแย่ลง และถ้าโชคดี วิเคราะห์เสร็จเราจะได้ $P$ มาในที่สุด (แนะนำให้ลองเช็ค $P$ ตามเงื่อนไข (1) อีกทีด้วย) ในข้อนี้ scenario คือ $X = max(T+A_i+B_i, T+A_i+A_j+B_j) < Y = max(T+A_i+A_j+B_i, T+A_j+B_j)$
 
-ซึ่งเมื่อลองวิเคราะห์ดูแล้วจะสรุปได้ว่า $B_j< B_i$ 
+ซึ่งเมื่อลองวิเคราะห์ดูแล้วจะสรุปได้ว่า $B_j< B_i$ ซึ่งก็คือ P ของเรานี่เอง
+
+### May 15
+
+**Mooz Server**
+
+ไอเดียประมาณ 85 คะแนนคือ สร้าง dfs tree แล้วพิจารณา edge
+
+**Repeats**
+
+Sliding Window
+
+**Triquery**
+
+Fancy Way of Keeping Quicksum 
+
+**Candyreserve**
+
+เราสามารถบอกได้ว่าเราต้องจิ้มติดกับขอบซ้ายของจุดเริ่มเท่านั้น ที่เหลือก็ sweep line + segment tree DP
+
+### May 16
+
+**Fanclub**
+
+Segment Tree + LCA
+
+**GG**
+
+Recursive Graph, ค่อย ๆ หาคำตอบของชั้นน้อย ๆ แล้วรวมขึ้นไป
+
+**Mastermind**
+
+จริง ๆ แล้วข้อนี้เป็น output only ต้องสร้าง decision tree ไว้ก่อน แล้วใช้เป็น constant array ของโปรแกรมที่จะรัน
+
+**Polesropes**
+
+Segment Tree
