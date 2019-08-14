@@ -56,7 +56,6 @@ ll solve(int u, bool aval)
 	best = max(best, solve(u+1, aval));
 	int ed = arr[u].b;
 	int nxt = upper_bound(arr+u+1, arr+n+1, task(arr[u].b, 0, 0))-arr;
-	// if(u == 1) printf("nxt is %d\n", nxt);
 	best = max(best, arr[u].w+solve(nxt, aval));
 	if(aval) best = max(best, arr[u].w+ask(u+1, nxt-1)+solve(nxt, 0));
 	return dp[u][aval] = best;
