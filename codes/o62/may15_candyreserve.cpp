@@ -91,20 +91,20 @@ int main()
 	scanf("%d", &n);
 	foo.resize(n+1);
 	vals.pb(-1);
-	vector<int> fuck;
+	vector<int> nice;
 	for(int i = 1; i<= n; i++)
 	{
 		scanf("%d %d %d", &foo[i].a, &foo[i].b, &foo[i].c);
 		vals.pb(foo[i].a);
-		fuck.pb(foo[i].a);
+		nice.pb(foo[i].a);
 		vals.pb(foo[i].b);
 	}
 	sort(vals.begin(), vals.end());
 	vals.erase(unique(vals.begin(), vals.end()), vals.end());
-	sort(fuck.begin(), fuck.end());
-	fuck.erase(unique(fuck.begin(), fuck.end()), fuck.end());
+	sort(nice.begin(), nice.end());
+	nice.erase(unique(nice.begin(), nice.end()), nice.end());
 	// n = begins.size()-1;
-	for(int x : fuck)
+	for(int x : nice)
 	{
 		bar.pb(eve(mod(x), 1, mod(x), mod(x), 0));
 	}
@@ -129,7 +129,7 @@ int main()
 			dp[0][a] = run;
 			update(st[0], lz[0], a, a, run);
 			// printf("dp[%d][%d] = %d\n", 0, a, run);
-			printf("compute %d\n", a);
+			// printf("compute %d\n", a);
 			for(int k = 1; k< 3; k++)
 			{
 				dp[k][a] = run+ask(st[k-1], lz[k-1], a+1, n);
