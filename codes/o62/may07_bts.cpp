@@ -65,9 +65,7 @@ int main()
 		printf("-1\n"); return 0;
 	}
 	sort(vec.begin(), vec.end());
-	// printf("%d\n", t1);
 	memset(dp, -1, sizeof dp);
 	int res = solve(0, 0, t1);
-	// printf("res is %d\n", res);
 	printf("%d\n", res*a+(n-res-1)*b);
 }
