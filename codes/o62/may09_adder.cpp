@@ -133,13 +133,10 @@ int main()
 		for(int j = 0; j< i; j++) want.pb(pass[j]);
 		want.pb(carry[0]);
 		fin.pb(create_and(want));
-		// printf("sz = %d\n", want.size());
-		// printf("last sub depth %d\n", findpath(fin.back()));
 		want.clear();
 		sort(want.begin(), want.end());
 		sort(fin.begin(), fin.end(), cmp);
 		carry[i] = create_or(fin);
-		// printf("carry %d depth %d\n", i, findpath(carry[i]));
 	}
 	for(int i = 0; i< n; i++)
 	{
